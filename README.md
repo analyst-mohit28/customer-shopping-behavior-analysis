@@ -1,65 +1,33 @@
-Customer Shopping Behavior Analysis
+# Customer Shopping Behavior Analysis
 Tools Used: Python | SQL | Power BI
 
-Project Overview
-This project analyzes customer shopping behavior to understand revenue distribution, discount usage, subscription impact, and customer loyalty. The objective is to derive data-backed insights that support better business and marketing decisions.
+## Project Overview
+This project analyzes customer shopping behavior to understand revenue patterns, discount usage, subscription impact, and customer loyalty. The goal is to derive data-backed insights that can support business and marketing decisions.
 
-Data & Tools
-- Python was used for data understanding, cleaning, and feature creation  
-- SQL was used to answer business-driven analytical questions  
-- Power BI was used to build an interactive dashboard for visualization  
+## What Was Done
+- Explored and cleaned the dataset using Python
+- Handled missing values and created derived features such as age groups
+- Used SQL to answer business-focused analytical questions
+- Built a Power BI dashboard to visualize customer behavior and trends
 
-Analysis Workflow
-1. Explored and cleaned the dataset using Python  
-2. Handled missing values and created age group segmentation  
-3. Performed business analysis using SQL queries  
-4. Built a Power BI dashboard to summarize insights  
+## Key Analysis Areas
+- Revenue distribution across customer demographics
+- Impact of discounts on customer spending
+- Comparison of subscribed vs non-subscribed customers
+- Identification of discount-dependent products
+- Customer segmentation into new, returning, and loyal groups
+- Revenue contribution across age groups
 
-Key Business Questions Answered
-- How is revenue distributed across customer demographics?
-- Do discounts reduce or maintain customer spending?
-- Does subscription status impact average spend and total revenue?
-- Which products are most discount-dependent?
-- How does revenue vary by age group?
+## Key Insights
+- Male customers contribute significantly higher total revenue compared to female customers
+- Discounts do not always reduce spending; some customers spend above average even when discounts are applied
+- Subscription status does not significantly increase average spend, but many repeat buyers are not subscribed
+- Revenue is fairly evenly distributed across age groups
 
-Python: Data Preparation
-Python was used to understand the dataset structure, handle missing values, and prepare features for analysis.
+## Business Value
+This analysis helps identify opportunities for improving subscription conversion, optimizing discount strategies, and targeting high-value customer segments.
 
-
-
-Sample Python Output
-
-
- 
-
-SQL: Business Analysis
-SQL queries were written to analyze customer behavior and revenue trends.
-
-Revenue by Gender
- 
-
-
-Subscribers vs Non-Subscribers
- 
-
-Customer Segmentation
- 
-
-Power BI Dashboard
-An interactive Power BI dashboard was created to visualize customer trends and performance metrics.
-
-
-
-
-
-Key Insights
-- Male customers contribute significantly higher total revenue than female customers  
-- Discounts do not always reduce spending; some customers still spend above average  
-- Subscription status does not significantly increase average spend, but repeat buyers show conversion potential  
-- Revenue distribution across age groups is relatively balanced  
-
-Business Recommendations
-- Target repeat buyers for subscription conversion  
-- Apply discounts selectively to price-sensitive products  
-- Focus marketing on high-performing customer segments  
-
+## Project Files
+- Python notebook for data preparation and exploration
+- SQL queries for business analysis
+- Power BI dashboard for visualization
