@@ -96,7 +96,7 @@ The interactive dashboard highlights:
 
 ## 📊 Dashboard Preview
 
-![Dashboard Overview](dashboard.png))
+![Dashboard Overview]https://github.com/analyst-mohit28/customer-shopping-behavior-analysis/blob/main/Dashboard.png
 
 ---
 
