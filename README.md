@@ -94,7 +94,7 @@ The interactive dashboard highlights:
 - Subscription impact
 - Discount-dependent products
 
-(Add dashboard screenshot here)
+![Dashboard Overview](dashboard_overview.png)
 
 ---
 
