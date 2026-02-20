@@ -1,33 +1,126 @@
-# Customer Shopping Behavior Analysis
-Tools Used: Python | SQL | Power BI
+# Customer Shopping Behavior Analysis  
 
-## Project Overview
-This project analyzes customer shopping behavior to understand revenue patterns, discount usage, subscription impact, and customer loyalty. The goal is to derive data-backed insights that can support business and marketing decisions.
+## 📌 Business Problem
 
-## What Was Done
-- Explored and cleaned the dataset using Python
-- Handled missing values and created derived features such as age groups
-- Used SQL to answer business-focused analytical questions
-- Built a Power BI dashboard to visualize customer behavior and trends
+E-commerce businesses often struggle to understand:
+- Which customer segments generate the most revenue
+- Whether discounts impact profitability
+- If subscription programs increase long-term value
+- How age and loyalty influence purchasing behavior
 
-## Key Analysis Areas
-- Revenue distribution across customer demographics
-- Impact of discounts on customer spending
-- Comparison of subscribed vs non-subscribed customers
-- Identification of discount-dependent products
-- Customer segmentation into new, returning, and loyal groups
-- Revenue contribution across age groups
+This project analyzes 3,900 customer transactions to uncover revenue drivers and customer patterns.
 
-## Key Insights
-- Male customers contribute significantly higher total revenue compared to female customers
-- Discounts do not always reduce spending; some customers spend above average even when discounts are applied
-- Subscription status does not significantly increase average spend, but many repeat buyers are not subscribed
-- Revenue is fairly evenly distributed across age groups
+---
 
-## Business Value
-This analysis helps identify opportunities for improving subscription conversion, optimizing discount strategies, and targeting high-value customer segments.
+## 📊 Key Performance Indicators (KPIs)
 
-## Project Files
-- Python notebook for data preparation and exploration
-- SQL queries for business analysis
-- Power BI dashboard for visualization
+- **Total Revenue:** 233,081
+- **Total Customers:** 3,900
+- **Average Order Value (AOV):** 59.76
+- **Male Revenue Contribution:** 67.7%
+- **Female Revenue Contribution:** 32.3%
+
+---
+
+## 🛠 Tools Used
+
+- Python (Pandas, NumPy)
+- MySQL
+- Power BI
+
+---
+
+## 🧹 Data Preparation (Python)
+
+- Handled missing review ratings using median imputation
+- Standardized column naming (snake_case)
+- Created new feature: `age_group`
+- Created customer segmentation (New / Returning / Loyal)
+- Loaded cleaned dataset into MySQL for structured analysis
+
+---
+
+## 🗄 SQL Business Analysis
+
+### Revenue by Gender
+
+```sql
+SELECT gender, SUM(purchase_amount) AS total_revenue
+FROM customers
+GROUP BY gender;
+```
+
+📌 Insight:
+Male customers contribute nearly 2.1x more revenue than female customers.
+
+---
+
+### Subscription vs Non-Subscription Revenue
+
+```sql
+SELECT subscription_status, SUM(purchase_amount)
+FROM customers
+GROUP BY subscription_status;
+```
+
+📌 Insight:
+Subscribers do not significantly outperform non-subscribers in average spending, indicating weak subscription monetization.
+
+---
+
+### Discount Dependency
+
+```sql
+SELECT product_name,
+       COUNT(CASE WHEN discount_applied = 'Yes' THEN 1 END) * 100.0 / COUNT(*) AS discount_rate
+FROM customers
+GROUP BY product_name
+ORDER BY discount_rate DESC
+LIMIT 5;
+```
+
+📌 Insight:
+Certain products show heavy discount dependency, posing potential margin risk.
+
+---
+
+## 📈 Dashboard Insights (Power BI)
+
+The interactive dashboard highlights:
+
+- Revenue distribution by gender
+- Customer loyalty segmentation
+- Age group revenue contribution
+- Subscription impact
+- Discount-dependent products
+
+(Add dashboard screenshot here)
+
+---
+
+## 🔍 Business Insights
+
+- Revenue is highly gender-skewed (68% male contribution).
+- Average order value remains moderate at 59.76.
+- Loyal customers dominate the customer base.
+- Subscription model does not significantly increase average spending.
+- Some products rely heavily on discounts, reducing potential margins.
+
+---
+
+## 💡 Strategic Recommendations
+
+1. Target high-spending male segment with personalized retention campaigns.
+2. Improve subscription incentives to increase recurring revenue.
+3. Reduce over-reliance on discount-heavy products.
+4. Develop targeted acquisition strategies for underperforming segments.
+
+---
+
+## 🚀 Conclusion
+
+This project demonstrates a full analytics workflow:
+
+Data Cleaning → Feature Engineering → SQL Analysis → Dashboard Visualization → Business Strategy
+
+It showcases the ability to transform raw transaction data into actionable business insights.
