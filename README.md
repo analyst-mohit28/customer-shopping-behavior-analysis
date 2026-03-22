@@ -1,6 +1,6 @@
 # Customer Shopping Behavior Analysis  
 
-## 📌 Business Problem
+## Business Problem
 
 E-commerce businesses often struggle to understand:
 - Which customer segments generate the most revenue
@@ -12,7 +12,7 @@ This project analyzes 3,900 customer transactions to uncover revenue drivers and
 
 ---
 
-## 📊 Key Performance Indicators (KPIs)
+## Key Performance Indicators (KPIs)
 
 - **Total Revenue:** 233,081
 - **Total Customers:** 3,900
@@ -22,7 +22,7 @@ This project analyzes 3,900 customer transactions to uncover revenue drivers and
 
 ---
 
-## 🛠 Tools Used
+## Tools Used
 
 - Python (Pandas, NumPy)
 - MySQL
@@ -30,7 +30,7 @@ This project analyzes 3,900 customer transactions to uncover revenue drivers and
 
 ---
 
-## 🧹 Data Preparation (Python)
+## Data Preparation (Python)
 
 - Handled missing review ratings using median imputation
 - Standardized column naming (snake_case)
@@ -40,7 +40,7 @@ This project analyzes 3,900 customer transactions to uncover revenue drivers and
 
 ---
 
-## 🗄 SQL Business Analysis
+## SQL Business Analysis
 
 ### Revenue by Gender
 
@@ -50,7 +50,7 @@ FROM customers
 GROUP BY gender;
 ```
 
-📌 Insight:
+Insight:
 Male customers contribute nearly 2.1x more revenue than female customers.
 
 ---
@@ -63,7 +63,7 @@ FROM customers
 GROUP BY subscription_status;
 ```
 
-📌 Insight:
+Insight:
 Subscribers do not significantly outperform non-subscribers in average spending, indicating weak subscription monetization.
 
 ---
@@ -79,12 +79,12 @@ ORDER BY discount_rate DESC
 LIMIT 5;
 ```
 
-📌 Insight:
+Insight:
 Certain products show heavy discount dependency, posing potential margin risk.
 
 ---
 
-## 📈 Dashboard Insights (Power BI)
+## Dashboard Insights (Power BI)
 
 The interactive dashboard highlights:
 
@@ -94,13 +94,13 @@ The interactive dashboard highlights:
 - Subscription impact
 - Discount-dependent products
 
-## 📊 Dashboard Preview
+## Dashboard Preview
 
 ![Dashboard Overview](https://github.com/analyst-mohit28/customer-shopping-behavior-analysis/blob/main/Dashboard.png)
 
 ---
 
-## 🔍 Business Insights
+## Business Insights
 
 - Revenue is highly gender-skewed (68% male contribution).
 - Average order value remains moderate at 59.76.
@@ -110,7 +110,7 @@ The interactive dashboard highlights:
 
 ---
 
-## 💡 Strategic Recommendations
+## Strategic Recommendations
 
 1. Target high-spending male segment with personalized retention campaigns.
 2. Improve subscription incentives to increase recurring revenue.
@@ -119,7 +119,7 @@ The interactive dashboard highlights:
 
 ---
 
-## 🚀 Conclusion
+## Conclusion
 
 This project demonstrates a full analytics workflow:
 
